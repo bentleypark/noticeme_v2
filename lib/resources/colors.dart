@@ -1,0 +1,1 @@
+const SPLASH_COLOR = '#3cd6e0';
