@@ -1,3 +1,4 @@
+import 'dart:core';
 import 'dart:ui';
 
 Color parseColor(String hexColor) {
@@ -10,4 +11,8 @@ extension ExtendedColor on String {
     final hexCode = this.replaceAll('#', '');
     return Color(int.parse('FF$hexCode', radix: 16));
   }
+}
+
+extension StringExt on String {
+  static String createSomething() => "Some words";
 }
