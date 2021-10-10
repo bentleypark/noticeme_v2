@@ -34,6 +34,11 @@ dependencies:
   get:
   websafe_svg:
 
+  firebase_core:
+  firebase_auth:
+
+  flutter_svg:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
