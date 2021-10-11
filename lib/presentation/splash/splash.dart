@@ -11,6 +11,7 @@ class Splash extends StatelessWidget {
       backgroundColor: COLOR_WHITE.parseColor(),
       body: Container(
         child: GetBuilder<SplashController>(
+          init: SplashController(),
           builder: (controller) {
             return Center(
                 child: Image(image: AssetImage('images/splash_logo.png')));
