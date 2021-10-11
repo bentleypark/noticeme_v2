@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:noticeme/controller/manage_controller.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';

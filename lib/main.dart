@@ -27,7 +27,7 @@ class NoticeMeApp extends StatelessWidget {
       getPages: routers(),
       initialRoute: Routers.SPLASH,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     );

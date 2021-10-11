@@ -6,12 +6,16 @@ import 'package:noticeme/presentation/manage/manage_view.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
+import 'notification_view.dart';
+
 class Manage extends GetView<ManageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [getManageView()],
+        children: [NotificationView(),
+          // getManageView()
+        ],
       ),
     );
   }
