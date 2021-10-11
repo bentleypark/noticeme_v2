@@ -12,6 +12,7 @@ class Home extends StatelessWidget {
     return GetBuilder<HomeController>(
       builder: (controller) {
         return Scaffold(
+          extendBody: true,
           backgroundColor: COLOR_GRAY.parseColor(),
           body: SafeArea(
             child: IndexedStack(
@@ -24,10 +25,7 @@ class Home extends StatelessWidget {
             ),
           ),
           bottomNavigationBar: ClipRRect(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10),
-              topLeft: Radius.circular(10),
-            ),
+            borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)),
             child: BottomNavigationBar(
               selectedItemColor: Colors.greenAccent,
               onTap: controller.changeTabIndex,

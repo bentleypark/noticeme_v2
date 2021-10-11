@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:noticeme/controller/manage_controller.dart';
-import 'package:noticeme/presentation/manage/EmptyView.dart';
+import 'package:noticeme/presentation/manage/empty_view.dart';
+import 'package:noticeme/presentation/manage/manage_view.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
@@ -10,8 +11,16 @@ class Manage extends GetView<ManageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [EmptyView()],
+        children: [getManageView()],
       ),
     );
+  }
+
+  Widget getManageView() {
+    if (controller.isEmpty) {
+      return EmptyView();
+    } else {
+      return ManageView(controller);
+    }
   }
 }
