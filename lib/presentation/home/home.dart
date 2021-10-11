@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:noticeme/controller/home_controller.dart';
+import 'package:noticeme/presentation/manage/manage.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
-class Home extends GetView<HomeController> {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
@@ -16,20 +17,18 @@ class Home extends GetView<HomeController> {
             child: IndexedStack(
               index: controller.tabIndex,
               children: [
-                // HomePage(),
-                // NewsPage(),
-                // AlertsPage(),
-                // AccountPage(),
+                Manage(),
+                Manage(),
+                Manage(),
               ],
             ),
           ),
           bottomNavigationBar: ClipRRect(
             borderRadius: BorderRadius.only(
-              topRight: Radius.circular(30),
-              topLeft: Radius.circular(30),
+              topRight: Radius.circular(10),
+              topLeft: Radius.circular(10),
             ),
             child: BottomNavigationBar(
-              unselectedItemColor: Colors.grey,
               selectedItemColor: Colors.greenAccent,
               onTap: controller.changeTabIndex,
               currentIndex: controller.tabIndex,
@@ -85,7 +84,7 @@ class Home extends GetView<HomeController> {
               child: FittedBox(
                 child: FloatingActionButton(
                   onPressed: () {},
-                  tooltip: 'Increment',
+                  tooltip: 'Add',
                   child: Icon(Icons.add, size: 27),
                   elevation: 4.0,
                   backgroundColor: COLOR_WHITE.parseColor(),
