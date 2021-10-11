@@ -1,10 +1,13 @@
 import 'package:get/get.dart';
+import 'package:noticeme/binding/home_binding.dart';
 import 'package:noticeme/binding/splash_binding.dart';
+import 'package:noticeme/presentation/home/home.dart';
 import 'package:noticeme/presentation/splash/splash.dart';
 
 routers() => [
       GetPage(
-          name: Routers.SPLASH, page: () => Splash(), binding: SplashBinding())
+          name: Routers.SPLASH, page: () => Splash(), binding: SplashBinding()),
+      GetPage(name: Routers.HOME, page: () => Home(), binding: HomeBinding()),
     ];
 
 abstract class Routers {

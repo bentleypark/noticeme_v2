@@ -1,1 +1,4 @@
 const COLOR_WHITE = '#FFFFFF';
+const COLOR_GRAY = '#E5E5E5';
+const COLOR_GRAY01 = '#C4C4C4';
+const COLOR_GREEN_ORANGE = '#7CD685';

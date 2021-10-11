@@ -15,7 +15,7 @@ class NoticeMeApp extends StatelessWidget {
       title: APP_NAME,
       debugShowCheckedModeBanner: false,
       getPages: routers(),
-      initialRoute: Routers.SPLASH,
+      initialRoute: Routers.HOME,
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         visualDensity: VisualDensity.adaptivePlatformDensity,
