@@ -38,6 +38,7 @@ dependencies:
 #  firebase_auth:
 
   flutter_svg:
+  auto_size_text:
 
 dev_dependencies:
   flutter_test:
