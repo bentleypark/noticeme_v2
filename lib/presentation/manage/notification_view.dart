@@ -8,20 +8,22 @@ class NotificationView extends StatelessWidget {
     return SafeArea(
       child: Card(
         elevation: 1,
-        margin: EdgeInsets.fromLTRB(8, 24, 8, 24),
+        margin: EdgeInsets.fromLTRB(8, 0, 8, 24),
         child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Padding(
-            padding: EdgeInsets.only(left: 8, top: 20, right: 8, bottom: 20),
+            padding: EdgeInsets.only(left: 6, right: 8),
             child: Icon(
               Icons.close,
               color: COLOR_GRAY01.parseColor(),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 20, right: 12, bottom: 20),
-            child: Text(
-              '최대일곱자가능 바꾸는 날이에요',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+          Flexible(
+            child: Padding(
+              padding: EdgeInsets.only( right: 8),
+              child: Text(
+                '최대일곱자가능 바꾸는 날이에요',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+              ),
             ),
           ),
           OutlinedButton(

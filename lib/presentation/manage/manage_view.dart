@@ -15,7 +15,7 @@ class ManageView extends StatelessWidget {
         Align(
           alignment: Alignment.topLeft,
           child: Padding(
-            padding: EdgeInsets.only(left: 24, top: 55),
+            padding: EdgeInsets.only(left: 24, top: 12),
             child: Text(
               controller.title,
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
@@ -25,7 +25,7 @@ class ManageView extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: Padding(
-              padding: EdgeInsets.only(right: 24, top: 55),
+              padding: EdgeInsets.only(right: 24, top: 12),
               child: Container(
                 height: 40,
                 width: 40,
