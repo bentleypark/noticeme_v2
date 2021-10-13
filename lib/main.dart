@@ -8,8 +8,8 @@ import 'package:noticeme/utils/ex_fuctions.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor: Colors.white, // navigation bar color
-    statusBarColor: Colors.white, // status bar color
+    systemNavigationBarColor: COLOR_GREEN_ORANGE.parseColor(), // navigation bar color
+    statusBarColor: COLOR_GREEN_ORANGE.parseColor(), // status bar color
     statusBarIconBrightness: Brightness.dark, // status bar icon color
     systemNavigationBarIconBrightness: Brightness.dark, // color of navigation controls
   ));
