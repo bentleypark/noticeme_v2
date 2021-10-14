@@ -5,5 +5,5 @@ class ManageController extends GetxController {
 
   var title = '사용 중';
 
-  var isEmpty = true;
+  var isEmpty = false;
 }
