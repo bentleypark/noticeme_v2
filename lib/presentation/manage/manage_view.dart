@@ -3,6 +3,7 @@ import 'package:noticeme/controller/manage_controller.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
+
 class ManageView extends StatelessWidget {
   ManageView(this.controller);
 
@@ -25,21 +26,22 @@ class ManageView extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: Padding(
-              padding: EdgeInsets.only(right: 24, top: 12),
-              child: Container(
-                height: 40,
-                width: 40,
-                child: FittedBox(
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    tooltip: 'Filter',
-                    child: Image(image: AssetImage('images/filter.png')),
-                    elevation: 4.0,
-                    backgroundColor: COLOR_WHITE.parseColor(),
-                    foregroundColor: COLOR_GRAY01.parseColor(),
-                  ),
+            padding: EdgeInsets.only(right: 24, top: 12),
+            child: Container(
+              height: 40,
+              width: 40,
+              child: FittedBox(
+                child: FloatingActionButton(
+                  onPressed: () {},
+                  tooltip: 'Filter',
+                  child: Image(image: AssetImage('images/filter.png')),
+                  elevation: 4.0,
+                  backgroundColor: COLOR_WHITE.parseColor(),
+                  foregroundColor: COLOR_GRAY01.parseColor(),
                 ),
-              )),
+              ),
+            ),
+          ),
         )
       ],
     );
