@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "362894906074",
+    "project_id": "noticeme-f0af2",
+    "storage_bucket": "noticeme-f0af2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362894906074:android:c2ee86429767410585cbe3",
+        "android_client_info": {
+          "package_name": "com.project.noticeme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362894906074-0h3au5v2m9tjhr0r1r1alpjvsjjostf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFlB2yX1R9T4xpUrz6eL25VhbDAmFqg9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362894906074-0h3au5v2m9tjhr0r1r1alpjvsjjostf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
