@@ -122,7 +122,7 @@ class ManageView extends StatelessWidget {
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
-                        padding: EdgeInsets.only(left: 14, top: 14),
+                        padding: EdgeInsets.only( top: 14),
                         child: Column(
                           children: [
                             Text(
@@ -132,12 +132,15 @@ class ManageView extends StatelessWidget {
                                   fontSize: 24,
                                   fontWeight: FontWeight.w700),
                             ),
-                            Text(
-                              '가나다라마바사',
-                              style: TextStyle(
-                                  color: COLOR_WHITE.parseColor(),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
+                            Padding(
+                              padding: EdgeInsets.only(left: 18),
+                              child: Text(
+                                '가나다라마바사',
+                                style: TextStyle(
+                                    color: COLOR_WHITE.parseColor(),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400),
+                              ),
                             )
                           ],
                         ),
