@@ -39,19 +39,23 @@ class NotificationView extends StatelessWidget {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.only(right: 8,top: 14, bottom: 14),
-                  child: OutlinedButton(
-                      onPressed: update,
-                      child: Text('교체하기'),
-                      style: OutlinedButton.styleFrom(
-                          textStyle: TextStyle(
-                              color: COLOR_GREEN_ORANGE.parseColor(),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700),
-                          side: BorderSide(
-                              color: COLOR_GREEN_ORANGE.parseColor(), width: 1),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0)))))
+                padding: EdgeInsets.only(right: 8, top: 14, bottom: 14),
+                child: OutlinedButton(
+                  onPressed: update,
+                  child: Text('교체하기'),
+                  style: OutlinedButton.styleFrom(
+                    textStyle: TextStyle(
+                        color: COLOR_GREEN_ORANGE.parseColor(),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700),
+                    side: BorderSide(
+                        color: COLOR_GREEN_ORANGE.parseColor(), width: 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),

@@ -78,7 +78,6 @@ class Home extends StatelessWidget {
           floatingActionButton: Visibility(
             visible: controller.isHomeTap(),
             child: Container(
-              // alignment: Alignment(0.0, 0.9),
               height: 70,
               width: 70,
               child: FittedBox(

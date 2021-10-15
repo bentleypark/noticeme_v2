@@ -3,3 +3,5 @@ const COLOR_GRAY = '#E5E5E5';
 const COLOR_GRAY01 = '#C4C4C4';
 const COLOR_GREEN_ORANGE = '#7CD685';
 const COLOR_BLACK = '#333333';
+
+const COLOR_RED_BLUE = '#FF796A';
