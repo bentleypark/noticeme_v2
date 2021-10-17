@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:noticeme/controller/home_controller.dart';
 import 'package:noticeme/presentation/manage/manage.dart';
 import 'package:noticeme/resources/colors.dart';
+import 'package:noticeme/router/router.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
 class Home extends StatelessWidget {
@@ -83,7 +84,9 @@ class Home extends StatelessWidget {
               child: FittedBox(
                 child: FloatingActionButton(
                   heroTag: null,
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.offNamed(Routers.ADD);
+                  },
                   tooltip: 'Add',
                   child: Icon(Icons.add, size: 24),
                   elevation: 4.0,

@@ -76,7 +76,7 @@ class ManageView extends StatelessWidget {
                     'yellow',
                     [
                       UserConsumableChild(),
-                      // UserConsumableChild(),
+                      UserConsumableChild(),
                       // UserConsumableChild()
                     ],
                   ),
