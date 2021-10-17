@@ -70,7 +70,17 @@ class ManageView extends StatelessWidget {
               24,
               (index) {
                 return ItemCardView(
-                    UserConsumable.short('주방 고무장갑', 'blue_glove', 'yellow'));
+                  UserConsumable.short(
+                    '주방 고무장갑',
+                    'blue_glove',
+                    'yellow',
+                    [
+                      UserConsumableChild(),
+                      // UserConsumableChild(),
+                      // UserConsumableChild()
+                    ],
+                  ),
+                );
               },
             ),
           ),

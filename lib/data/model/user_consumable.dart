@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:noticeme/resources/colors.dart';
+import 'package:noticeme/resources/const.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
 class UserConsumable {
@@ -14,18 +13,17 @@ class UserConsumable {
 
   String color;
 
-  int duration = 0;
+  List<UserConsumableChild> child;
 
-  int starDate = 0;
+  UserConsumable(
+    this.id,
+    this.title,
+    this.category,
+    this.icon,
+    this.color,
+  );
 
-  int endDate = 0;
-
-  int alarmDate = 0;
-
-  UserConsumable(this.id, this.title, this.category, this.icon, this.color,
-      this.duration, this.starDate, this.endDate, this.alarmDate);
-
-  UserConsumable.short(this.title, this.icon, this.color);
+  UserConsumable.short(this.title, this.icon, this.color, this.child);
 
   findColor() {
     switch (this.color) {
@@ -47,5 +45,30 @@ class UserConsumable {
       case "blue":
         return COLOR_BLUE_RED.parseColor();
     }
+  }
+
+  isGroup() {
+    return child.length > 1;
+  }
+}
+
+class UserConsumableChild {
+  int id = 0;
+
+  String title = '';
+
+  int duration = 0;
+
+  int starDate = 0;
+
+  int endDate = 0;
+
+  int alarmDate = 0;
+
+  UserConsumableChild();
+
+  UserConsumableChild.addNewItem(this.title, this.duration, this.starDate) {
+    this.endDate = duration + starDate;
+    this.alarmDate = endDate - ONE_DAY_MILLISECONDS;
   }
 }

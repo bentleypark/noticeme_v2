@@ -15,18 +15,21 @@ class ItemCardView extends StatelessWidget {
       padding: EdgeInsets.only(),
       child: Stack(
         children: [
-          Padding(
-            padding: EdgeInsets.only(left: 3, top: 3),
-            child: Opacity(
-              opacity: 0.4,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                    color: userConsumable.findColor()),
-                width: MediaQuery.of(context).size.width / 2.2,
-                height: 75,
+          Visibility(
+            visible: userConsumable.isGroup(),
+            child: Padding(
+              padding: EdgeInsets.only(left: 3, top: 3),
+              child: Opacity(
+                opacity: 0.4,
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                      color: userConsumable.findColor()),
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 75,
+                ),
               ),
             ),
           ),
@@ -60,7 +63,7 @@ class ItemCardView extends StatelessWidget {
                             ),
                             color: COLOR_WHITE.parseColor()),
                         child: Text(
-                          '999',
+                          userConsumable.child.length.toString(),
                           style: TextStyle(
                               color: userConsumable.findColor(),
                               fontSize: 10,
