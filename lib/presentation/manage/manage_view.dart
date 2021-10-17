@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:noticeme/controller/manage_controller.dart';
+import 'package:noticeme/data/model/user_consumable.dart';
+import 'package:noticeme/presentation/manage/item_card_view.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
@@ -30,7 +31,7 @@ class ManageView extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: Padding(
-                padding: EdgeInsets.only(right: 24, top: 12),
+                padding: EdgeInsets.only(right: 24, top: 12, bottom: 24),
                 child: Container(
                   height: 40,
                   width: 40,
@@ -50,108 +51,30 @@ class ManageView extends StatelessWidget {
           ],
         ),
         Padding(
-          padding: EdgeInsets.only(left: 24, top: 24),
-          child: Stack(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 3, top: 3),
-                child: Opacity(
-                  opacity: 0.4,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                        color: COLOR_RED_BLUE.parseColor()),
-                    width: 170,
-                    height: 75,
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                    color: COLOR_RED_BLUE.parseColor()),
-                width: 170,
-                height: 75,
-                child: Stack(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 8),
-                      child: SvgPicture.asset('images/bookmark.svg'),
-                    ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 8, top: 5),
-                        child: Opacity(
-                          opacity: 0.9,
-                          child: Container(
-                            width: 24,
-                            height: 12,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(5),
-                                ),
-                                color: COLOR_WHITE.parseColor()),
-                            child: Text(
-                              '999',
-                              style: TextStyle(
-                                  color: COLOR_RED_BLUE.parseColor(),
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 12, top: 9),
-                        child: Image(
-                          image: AssetImage('images/blue_glove.png'),
-                          width: 52,
-                          height: 52,
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: EdgeInsets.only( top: 14),
-                        child: Column(
-                          children: [
-                            Text(
-                              'D-999',
-                              style: TextStyle(
-                                  color: COLOR_WHITE.parseColor(),
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 18),
-                              child: Text(
-                                '가나다라마바사',
-                                style: TextStyle(
-                                    color: COLOR_WHITE.parseColor(),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ],
+          padding: EdgeInsets.only(
+            right: 12,
+            bottom: 50,
+            left: 12,
           ),
-        )
+          child: GridView.count(
+            // Create a grid with 2 columns. If you change the scrollDirection to
+            // horizontal, this produces 2 rows.
+            crossAxisCount: 2,
+            primary: false,
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            childAspectRatio: MediaQuery.of(context).size.width /
+                (MediaQuery.of(context).size.height / 4.3),
+            // Generate 100 widgets that display their index in the List.
+            children: List.generate(
+              24,
+              (index) {
+                return ItemCardView(
+                    UserConsumable.short('주방 고무장갑', 'blue_glove', 'yellow'));
+              },
+            ),
+          ),
+        ),
       ],
     );
   }

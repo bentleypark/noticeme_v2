@@ -82,6 +82,7 @@ class Home extends StatelessWidget {
               width: 70,
               child: FittedBox(
                 child: FloatingActionButton(
+                  heroTag: null,
                   onPressed: () {},
                   tooltip: 'Add',
                   child: Icon(Icons.add, size: 24),

@@ -3,6 +3,7 @@ import 'package:noticeme/binding/home_binding.dart';
 import 'package:noticeme/binding/manage_binding.dart';
 import 'package:noticeme/binding/splash_binding.dart';
 import 'package:noticeme/presentation/home/home.dart';
+import 'package:noticeme/presentation/manage/manage.dart';
 import 'package:noticeme/presentation/splash/splash.dart';
 
 routers() => [
@@ -10,7 +11,7 @@ routers() => [
           name: Routers.SPLASH, page: () => Splash(), binding: SplashBinding()),
       GetPage(name: Routers.HOME, page: () => Home(), binding: HomeBinding()),
       GetPage(
-          name: Routers.MANAGE, page: () => Home(), binding: ManageBinding()),
+          name: Routers.MANAGE, page: () => Manage(), binding: ManageBinding()),
     ];
 
 abstract class Routers {

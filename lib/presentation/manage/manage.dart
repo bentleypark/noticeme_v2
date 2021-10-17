@@ -12,7 +12,8 @@ class Manage extends GetView<ManageController> {
       statusBarColor: Colors.white, // status bar color
       systemNavigationBarColor: Colors.white, // navigation bar color
       statusBarIconBrightness: Brightness.dark, // status bar icon color
-      systemNavigationBarIconBrightness: Brightness.dark, // color of navigation controls
+      systemNavigationBarIconBrightness:
+          Brightness.dark, // color of navigation controls
     ));
   }
 
@@ -23,11 +24,13 @@ class Manage extends GetView<ManageController> {
           ? Stack(
               children: [EmptyView()],
             )
-          : Padding(
-              padding: EdgeInsets.only(top: 24),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [NotificationView(), ManageView(controller)],
+          : SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.only(top: 24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [NotificationView(), ManageView(controller)],
+                ),
               ),
             ),
     );
