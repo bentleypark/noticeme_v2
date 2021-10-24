@@ -4,6 +4,10 @@ import 'package:get/get.dart';
 import 'package:noticeme/router/router.dart';
 
 class ToolbarWithTextBtn extends StatelessWidget with PreferredSizeWidget {
+  ToolbarWithTextBtn(this.textBtnVisibleYn);
+
+  final bool textBtnVisibleYn;
+
   @override
   Size get preferredSize => Size.fromHeight(90.0);
 
@@ -24,13 +28,16 @@ class ToolbarWithTextBtn extends StatelessWidget with PreferredSizeWidget {
                 child: SvgPicture.asset('images/back.svg'),
               ),
             ),
-            Align(
-              alignment: Alignment.topRight,
-              child: InkWell(
-                onTap: () {},
-                child: Text(
-                  '저장',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+            Visibility(
+              visible: textBtnVisibleYn,
+              child: Align(
+                alignment: Alignment.topRight,
+                child: InkWell(
+                  onTap: () {},
+                  child: Text(
+                    '저장',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                  ),
                 ),
               ),
             ),
