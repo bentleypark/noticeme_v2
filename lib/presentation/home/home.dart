@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:noticeme/controller/home_controller.dart';
 import 'package:noticeme/presentation/manage/manage.dart';
 import 'package:noticeme/resources/colors.dart';
+import 'package:noticeme/router/router.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
 class Home extends StatelessWidget {
@@ -25,7 +26,8 @@ class Home extends StatelessWidget {
             ),
           ),
           bottomNavigationBar: ClipRRect(
-            borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)),
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(10), topLeft: Radius.circular(10)),
             child: BottomNavigationBar(
               selectedItemColor: Colors.greenAccent,
               onTap: controller.changeTabIndex,
@@ -54,7 +56,7 @@ class Home extends StatelessWidget {
                     width: 20,
                     height: 20,
                   ),
-                  label: 'D-Day',
+                  label: controller.isHomeTap() ? "" : 'D-Day',
                 ),
                 _bottomNavigationBarItem(
                   iconActive: SvgPicture.asset(
@@ -75,15 +77,18 @@ class Home extends StatelessWidget {
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
           floatingActionButton: Visibility(
-            visible: controller.tabIndex == 1,
+            visible: controller.isHomeTap(),
             child: Container(
-              height: 75,
-              width: 75,
+              height: 70,
+              width: 70,
               child: FittedBox(
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  heroTag: null,
+                  onPressed: () {
+                    Get.offNamed(Routers.ADD);
+                  },
                   tooltip: 'Add',
-                  child: Icon(Icons.add, size: 27),
+                  child: Icon(Icons.add, size: 24),
                   elevation: 4.0,
                   backgroundColor: COLOR_WHITE.parseColor(),
                   foregroundColor: COLOR_GREEN_ORANGE.parseColor(),

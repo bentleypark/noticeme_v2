@@ -34,17 +34,21 @@ dependencies:
   get:
   websafe_svg:
 
-#  firebase_core:
+  firebase_core:
 #  firebase_auth:
 
   flutter_svg:
   auto_size_text:
+
+  floor:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+  floor_generator:
+  build_runner:
 
 # The following section is specific to Flutter.
 flutter:

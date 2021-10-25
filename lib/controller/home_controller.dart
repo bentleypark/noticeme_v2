@@ -7,4 +7,8 @@ class HomeController extends GetxController {
     tabIndex = index;
     update();
   }
+
+  bool isHomeTap() {
+    return tabIndex == 1;
+  }
 }
