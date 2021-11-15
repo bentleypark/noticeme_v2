@@ -31,7 +31,7 @@ class NotificationView extends StatelessWidget {
                   padding: EdgeInsets.only(right: 6),
                   child: AutoSizeText(
                     '최대일곱자가능 바꾸는 날이에요',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                     maxLines: 1,
                   ),
                 ),
