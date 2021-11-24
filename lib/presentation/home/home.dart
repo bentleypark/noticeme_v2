@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
       builder: (controller) {
         return Scaffold(
           extendBody: true,
-          backgroundColor: COLOR_GRAY.parseColor(),
+          backgroundColor: Colors.white,
           body: SafeArea(
             child: IndexedStack(
               index: controller.tabIndex,

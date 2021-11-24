@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:noticeme/controller/manage_controller.dart';
 import 'package:noticeme/data/model/user_consumable.dart';
@@ -52,9 +54,9 @@ class ManageView extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(
-            right: 12,
-            bottom: 50,
-            left: 12,
+            right: 10,
+            bottom: 150,
+            left: 10,
           ),
           child: GridView.count(
             // Create a grid with 2 columns. If you change the scrollDirection to
@@ -64,7 +66,7 @@ class ManageView extends StatelessWidget {
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             childAspectRatio: MediaQuery.of(context).size.width /
-                (MediaQuery.of(context).size.height / 4.3),
+                (MediaQuery.of(context).size.height / getChildAspectRatio()),
             // Generate 100 widgets that display their index in the List.
             children: List.generate(
               24,
@@ -87,5 +89,13 @@ class ManageView extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  double getChildAspectRatio() {
+    if (Platform.isAndroid) {
+      return 4;
+    } else {
+      return 5;
+    }
   }
 }
