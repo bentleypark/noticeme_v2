@@ -11,10 +11,10 @@ class InputFilterTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 6),
-      child: ChoiceChip(
-        // backgroundColor: INPUT_FILTER_TILE_COLOR.parseColor(),
-        selected: true,
-        selectedColor: INPUT_FILTER_TILE_COLOR.parseColor(),
+      child: Chip(
+        backgroundColor: INPUT_FILTER_TILE_COLOR.parseColor(),
+        // selected: true,
+        // selectedColor: INPUT_FILTER_TILE_COLOR.parseColor(),
         label: Text(
           title,
           style: TextStyle(

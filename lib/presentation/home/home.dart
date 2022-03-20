@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
                     width: 20,
                     height: 20,
                   ),
-                  label: 'Search',
+                  label: 'SEARCH',
                 ),
                 _bottomNavigationBarItem(
                   iconActive: Container(),
@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                     width: 20,
                     height: 20,
                   ),
-                  label: controller.isHomeTap() ? "" : 'D-Day',
+                  label: controller.isHomeTap() ? "" : 'D-DAY',
                 ),
                 _bottomNavigationBarItem(
                   iconActive: SvgPicture.asset(
@@ -69,7 +69,7 @@ class Home extends StatelessWidget {
                     width: 20,
                     height: 20,
                   ),
-                  label: 'My',
+                  label: 'MY',
                 ),
               ],
             ),
