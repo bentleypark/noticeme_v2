@@ -13,7 +13,7 @@ class NotificationView extends StatelessWidget {
       return Visibility(
         visible: controller.isVisible,
         child: Card(
-          elevation: 1,
+          elevation: 1.5,
           margin: EdgeInsets.fromLTRB(12, 0, 12, 24),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

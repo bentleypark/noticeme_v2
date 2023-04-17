@@ -6,14 +6,14 @@ import 'package:noticeme/presentation/manage/empty_view.dart';
 import 'package:noticeme/presentation/manage/manage_view.dart';
 import 'notification_view.dart';
 
-class Manage extends GetView<ManageController> {
-  Manage() {
+class ManagePage extends GetView<ManageController> {
+  ManagePage() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.white, // status bar color
       systemNavigationBarColor: Colors.white, // navigation bar color
       statusBarIconBrightness: Brightness.dark, // status bar icon color
       systemNavigationBarIconBrightness:
-      Brightness.dark, // color of navigation controls
+          Brightness.dark, // color of navigation controls
     ));
   }
 
@@ -22,17 +22,20 @@ class Manage extends GetView<ManageController> {
     return Scaffold(
       body: controller.isEmpty
           ? Stack(
-        children: [EmptyView()],
-      )
+              children: [EmptyView()],
+            )
           : SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.only(top: 24),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [NotificationView(), ManageView(controller)],
-          ),
-        ),
-      ),
+              child: ColoredBox(
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [NotificationView(), ManageWidget()],
+                  ),
+                ),
+              ),
+            ),
     );
   }
 }

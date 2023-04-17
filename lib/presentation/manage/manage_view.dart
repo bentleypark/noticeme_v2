@@ -1,17 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:noticeme/controller/manage_controller.dart';
 import 'package:noticeme/data/model/user_consumable.dart';
 import 'package:noticeme/presentation/manage/item_card_view.dart';
 import 'package:noticeme/resources/colors.dart';
 import 'package:noticeme/utils/ex_fuctions.dart';
 
-class ManageView extends StatelessWidget {
-  ManageView(this.controller);
-
-  ManageController controller;
-
+class ManageWidget extends GetView<ManageController> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,7 +23,10 @@ class ManageView extends StatelessWidget {
                 padding: EdgeInsets.only(left: 24, top: 12),
                 child: Text(
                   controller.title,
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w700,
+                      color: COLOR_BLACK.parseColor()),
                 ),
               ),
             ),
@@ -42,7 +42,7 @@ class ManageView extends StatelessWidget {
                       onPressed: () {},
                       tooltip: 'Filter',
                       child: Image(image: AssetImage('images/filter.png')),
-                      elevation: 4.0,
+                      elevation: 2.0,
                       backgroundColor: COLOR_WHITE.parseColor(),
                       foregroundColor: COLOR_GRAY01.parseColor(),
                     ),

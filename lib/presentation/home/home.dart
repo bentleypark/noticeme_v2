@@ -19,9 +19,9 @@ class Home extends StatelessWidget {
             child: IndexedStack(
               index: controller.tabIndex,
               children: [
-                Manage(),
-                Manage(),
-                Manage(),
+                ManagePage(),
+                ManagePage(),
+                ManagePage(),
               ],
             ),
           ),

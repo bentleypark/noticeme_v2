@@ -4,7 +4,6 @@ import 'package:noticeme/binding/home_binding.dart';
 import 'package:noticeme/binding/manage_binding.dart';
 import 'package:noticeme/binding/splash_binding.dart';
 import 'package:noticeme/presentation/add/add_item_page.dart';
-import 'package:noticeme/presentation/add/add_page.dart';
 import 'package:noticeme/presentation/add/add_page_detail.dart';
 import 'package:noticeme/presentation/home/home.dart';
 import 'package:noticeme/presentation/manage/manage.dart';
@@ -15,8 +14,12 @@ routers() => [
           name: Routers.SPLASH, page: () => Splash(), binding: SplashBinding()),
       GetPage(name: Routers.HOME, page: () => Home(), binding: HomeBinding()),
       GetPage(
-          name: Routers.MANAGE, page: () => Manage(), binding: ManageBinding()),
-      GetPage(name: Routers.ADD, page: () => AddItemPage(), binding: AddBinding()),
+          name: Routers.MANAGE, page: () => ManagePage(), binding: ManageBinding()),
+      GetPage(
+          name: Routers.ADD,
+          page: () => AddItemPage(),
+          binding: AddBinding(),
+          transition: Transition.rightToLeft),
       GetPage(
           name: Routers.ADD_DETAIL,
           page: () => AddPageDetail(),
