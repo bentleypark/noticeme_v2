@@ -78,7 +78,7 @@ class ManageWidget extends GetView<ManageController> {
                     'yellow',
                     [
                       UserConsumableChild(),
-                      UserConsumableChild(),
+                      // UserConsumableChild(),
                       // UserConsumableChild()
                     ],
                   ),

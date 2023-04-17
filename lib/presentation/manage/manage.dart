@@ -25,6 +25,7 @@ class ManagePage extends GetView<ManageController> {
               children: [EmptyView()],
             )
           : SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
               child: ColoredBox(
                 color: Colors.white,
                 child: Padding(

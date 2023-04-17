@@ -47,32 +47,34 @@ class ItemCardView extends StatelessWidget {
                   padding: EdgeInsets.only(left: 8),
                   child: SvgPicture.asset('images/bookmark.svg'),
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 8, top: 5),
-                    child: Opacity(
-                      opacity: 0.9,
-                      child: Container(
-                        width: 24,
-                        height: 12,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(5),
+                userConsumable.child.length > 1
+                    ? Align(
+                        alignment: Alignment.topRight,
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 8, top: 5),
+                          child: Opacity(
+                            opacity: 0.9,
+                            child: Container(
+                              width: 24,
+                              height: 12,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(5),
+                                  ),
+                                  color: COLOR_WHITE.parseColor()),
+                              child: Text(
+                                userConsumable.child.length.toString(),
+                                style: TextStyle(
+                                    color: userConsumable.findColor(),
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w700),
+                              ),
                             ),
-                            color: COLOR_WHITE.parseColor()),
-                        child: Text(
-                          userConsumable.child.length.toString(),
-                          style: TextStyle(
-                              color: userConsumable.findColor(),
-                              fontSize: 10,
-                              fontWeight: FontWeight.w700),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                ),
+                      )
+                    : SizedBox.shrink(),
                 Align(
                   alignment: Alignment.topRight,
                   child: Padding(
